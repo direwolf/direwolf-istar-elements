@@ -1,0 +1,26 @@
+{
+  "name": "direwolf-istar-elements",
+  "version": "0.0.0",
+  "description": "iStar 2.0 elements for the Direwolf Modeler",
+  "author": "direwolf-istar-elements",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/direwolf/direwolf-istar-elements"
+  },
+  "scripts": {
+    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
+    "start:compatibility": "es-dev-server --app-index demo/index.html --compatibility all --node-resolve --open --watch"
+  },
+  "dependencies": {
+    "lit-html": "^1.0.0",
+    "lit-element": "^2.0.1",
+    "direwolf-elements": "~0.0.0",
+    "direwolf-modeler": "~0.0.0"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.5.0"
+  }
+}
