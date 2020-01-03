@@ -1,4 +1,5 @@
 import { ModelElement } from 'direwolf-modeler/model-element';
+import {ShapeInfo} from 'kld-intersections';
 
 export class IStarQuality extends ModelElement {
 
@@ -80,6 +81,13 @@ export class IStarQuality extends ModelElement {
 
   modelElementDragOver(modelElementType) {
     return this.acceptsChild(modelElementType);
+  }
+
+  getOuterShape(offset) {
+    offset.x += this.x;
+    offset.y += this.y;
+    const shape = ShapeInfo.path('m' + offset.x + ',' + offset.y + ' ' + this.path.attr('d'));
+    return shape;
   }
 
 

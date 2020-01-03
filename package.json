@@ -7,8 +7,8 @@
   "main": "index.js",
   "module": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/direwolf/direwolf-istar-elements"
+    "type": "git",
+    "url": "https://github.com/direwolf/direwolf-istar-elements"
   },
   "scripts": {
     "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
@@ -18,7 +18,8 @@
     "lit-html": "^1.0.0",
     "lit-element": "^2.0.1",
     "direwolf-elements": "~0.0.0",
-    "direwolf-modeler": "~0.0.0"
+    "direwolf-modeler": "~0.0.0",
+    "kld-intersections": "^0.6.0"
   },
   "devDependencies": {
     "es-dev-server": "^1.5.0"

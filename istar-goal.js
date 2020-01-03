@@ -1,4 +1,5 @@
 import { ModelShapeRect } from 'direwolf-modeler/model-shape-rect';
+import {ShapeInfo} from 'kld-intersections';
 
 export class IStarGoal extends ModelShapeRect {
 
@@ -51,6 +52,11 @@ export class IStarGoal extends ModelShapeRect {
 
   modelElementDragOver(modelElementType) {
     return this.acceptsChild(modelElementType);
+  }
+
+  getOuterShape(offset) {
+    let shape = ShapeInfo.rectangle({x: (offset.x + this.x), y: (offset.y + this.y), width: this.width, height: this.height, rx: 25, ry: 25});
+    return shape;
   }
 
 
