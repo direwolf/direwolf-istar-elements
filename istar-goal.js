@@ -34,7 +34,7 @@ export class IStarGoal extends ModelShapeRect {
   _resize() {
     let width = this.width;
     let height = this.height;
-    this.titleNode.x(width / 2);
+    this.titleNode.cx(width / 2);
     this.titleNode.attr({y: ((height / 2) + 3)});
   }
 

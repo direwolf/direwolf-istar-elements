@@ -32,12 +32,12 @@ export class IStarActor extends ModelShapeCircle {
 
   _resize() {
     let diameter = this.diameter;
-    this.titleNode.x(diameter / 2);
+    this.titleNode.cx(diameter / 2);
     this.titleNode.attr({y: ((diameter / 2) + 3)});
   }
 
   _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.diameter / 2) + 3), 'text-anchor': 'middle'}).x(this.diameter / 2);
+    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.diameter / 2) + 3), 'text-anchor': 'middle'}).cx(this.diameter / 2);
   }
 
   showPortOnHover() {

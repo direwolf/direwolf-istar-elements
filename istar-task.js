@@ -27,18 +27,20 @@ export class IStarTask extends ModelShapeHexagon {
   }
 
   _resize() {
+    super._resize();
+
     const width = this.width;
     const height = this.height;
 
     // a resize only makes sense if both width and height are already defined...
     if (width && height) {
-      this.titleNode.x(width / 2);
+      this.titleNode.cx(width / 2);
       this.titleNode.attr({y: ((height / 2) + 3)});
     }
   }
 
   _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.height / 2) + 3), 'text-anchor': 'middle'}).x(this.width / 2);
+    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.height / 2) + 3), 'text-anchor': 'middle'}).cx(this.width / 2);
   }
 
   showPortOnHover() {
