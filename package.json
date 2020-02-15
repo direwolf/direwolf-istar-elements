@@ -17,11 +17,11 @@
   "dependencies": {
     "lit-html": "^1.0.0",
     "lit-element": "^2.0.1",
-    "direwolf-elements": "0.0.4",
-    "direwolf-modeler": "0.0.4",
+    "direwolf-elements": "^0.0.4",
+    "direwolf-modeler": "^0.0.4",
     "kld-intersections": "^0.6.0"
   },
   "devDependencies": {
-    "es-dev-server": "^1.36.2"
+    "es-dev-server": "^1.40.0"
   }
 }
