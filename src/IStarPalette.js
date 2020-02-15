@@ -19,7 +19,7 @@ import { IStarDependency } from '../istar-dependency';
 import { IStarContribution } from '../istar-contribution';
 import { IStarQualification } from '../istar-qualification';
 
-import 'svg.js/dist/svg.js';
+import { SVG } from '@svgdotjs/svg.js'
 
 /**
  * `istar-palette`
