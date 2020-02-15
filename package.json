@@ -15,6 +15,7 @@
     "start:compatibility": "es-dev-server --app-index demo/index.html --compatibility all --node-resolve --open --watch"
   },
   "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
     "lit-html": "^1.0.0",
     "lit-element": "^2.0.1",
     "direwolf-elements": "^0.0.4",
