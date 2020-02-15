@@ -139,7 +139,8 @@ export default class IStarPalette extends GestureEventListeners(LitElement) {
     let div = document.createElement('div');
     div.classList.add('item');
     div.dataset.type = elementType;
-    let drawing = SVG(div).size(width, height);
+
+    let drawing = SVG().addTo(div).size(width, height);
 
     let node = new classType();
     node.createSVGElement(drawing);
@@ -153,7 +154,7 @@ export default class IStarPalette extends GestureEventListeners(LitElement) {
     let div = document.createElement('div');
     div.classList.add('item');
     div.dataset.type = elementType;
-    let drawing = SVG(div).size(width, height);
+    let drawing = SVG().addTo(div).size(width, height);
 
     let edge = new classType(null, true, [[0,15], [100,15]]);
     edge.createSVGElement(drawing);

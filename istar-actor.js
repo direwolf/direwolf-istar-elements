@@ -13,7 +13,7 @@ export class IStarActor extends ModelShapeCircle {
 
     this.circle.fill('#D1FEC7');
 
-    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._diameter / 2) + 3), 'text-anchor': 'middle'}).x(this._diameter / 2);
+    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._diameter / 2) + 3), 'text-anchor': 'middle'}).cx(this._diameter / 2);
 
     return group;
   }

@@ -19,6 +19,8 @@ export class IStarAssociationIsA extends ModelShapePath {
     // add relationship attribute
     this.text = group.text('is-a');
 
+    this.redrawPath();
+
     return group;
   }
 

@@ -17,7 +17,7 @@ export class IStarResource extends ModelShapeRect {
 
     this.rect.fill('#D1FEC7');
 
-    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._height / 2) + 3), 'text-anchor': 'middle'}).x(this._width / 2);
+    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._height / 2) + 3), 'text-anchor': 'middle'}).cx(this._width / 2);
 
     return group;
   }
