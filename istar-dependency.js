@@ -12,6 +12,8 @@ export class IStarDependency extends ModelShapePath {
     // add dependency label
     this.text = group.text('D').font({weight: 'bold', size: '16px'});
 
+    this.redrawPath();
+
     return group;
   }
 

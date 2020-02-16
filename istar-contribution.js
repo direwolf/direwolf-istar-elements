@@ -21,6 +21,8 @@ export class IStarContribution extends ModelShapePath {
     // add relationship attribute
     this.text = group.text(this._contribution);
 
+    this.redrawPath();
+
     return group;
   }
 
@@ -38,7 +40,6 @@ export class IStarContribution extends ModelShapePath {
     if (this._pathArray && (this._pathArray.length > 0)) {
       let mid = this._midPoint(this._pathArray[0], this._pathArray[1]);
       if (this.text) {
-        this.text.text(this.contribution);
         this.text.cx(mid[0]);
         this.text.cy(mid[1]);
       }
