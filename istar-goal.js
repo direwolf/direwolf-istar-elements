@@ -39,7 +39,7 @@ export class IStarGoal extends ModelShapeRect {
   }
 
   _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.height / 2) + 3), 'text-anchor': 'middle'}).x(this.width / 2);
+    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.height / 2) + 3), 'text-anchor': 'middle'}).cx(this.width / 2);
   }
 
   showPortOnHover() {
