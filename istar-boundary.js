@@ -20,7 +20,7 @@ export class IStarBoundary extends ModelShapeCircle {
   }
 
   get resizable() {
-    return false;
+    return true;
   }
 
   _resize() {
