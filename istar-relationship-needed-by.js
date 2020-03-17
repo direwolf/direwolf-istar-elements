@@ -17,6 +17,10 @@ export class IStarRelationshipNeededBy extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Needed-by-Relationship`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

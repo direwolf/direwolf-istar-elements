@@ -14,6 +14,10 @@ export class IStarBoundary extends ModelShapeCircle {
     return group;
   }
 
+  get descriptiveName() {
+    return `Boundary`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

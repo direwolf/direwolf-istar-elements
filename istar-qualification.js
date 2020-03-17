@@ -14,6 +14,10 @@ export class IStarQualification extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Qualification`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

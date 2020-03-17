@@ -21,6 +21,10 @@ export class IStarRefinementOr extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Or-Refinement`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

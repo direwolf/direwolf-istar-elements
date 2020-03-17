@@ -14,6 +14,10 @@ export class IStarRole extends IStarActor {
     return group;
   }
 
+  get descriptiveName() {
+    return `Role`;
+  }
+
   get resizable() {
     return false;
   }

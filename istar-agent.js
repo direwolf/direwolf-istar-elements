@@ -14,6 +14,10 @@ export class IStarAgent extends IStarActor {
     return group;
   }
 
+  get descriptiveName() {
+    return `Agent`;
+  }
+
   get resizable() {
     return false;
   }

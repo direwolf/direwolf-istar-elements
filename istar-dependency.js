@@ -17,6 +17,10 @@ export class IStarDependency extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Dependency`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

@@ -24,6 +24,10 @@ export class IStarAssociationParticipatesIn extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Participates-in-Association`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

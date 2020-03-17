@@ -26,6 +26,10 @@ export class IStarActor extends ModelShapeCircle {
     });
   }
 
+  get descriptiveName() {
+    return `Actor`;
+  }
+
   get resizable() {
     return false;
   }

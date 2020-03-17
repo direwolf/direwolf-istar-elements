@@ -26,6 +26,10 @@ export class IStarTask extends ModelShapeHexagon {
     });
   }
 
+  get descriptiveName() {
+    return `Task`;
+  }
+
   _resize() {
     super._resize();
 

@@ -25,6 +25,10 @@ export class IStarQuality extends ModelElement {
     return group;
   }
 
+  get descriptiveName() {
+    return `Quality`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
       x: {

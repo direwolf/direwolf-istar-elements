@@ -17,6 +17,10 @@ export class IStarRefinementAnd extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `And-Refinement`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
     });

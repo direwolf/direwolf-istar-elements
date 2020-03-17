@@ -23,6 +23,10 @@ export class IStarGoal extends ModelShapeRect {
     return group;
   }
 
+  get descriptiveName() {
+    return `Goal`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
       title: {

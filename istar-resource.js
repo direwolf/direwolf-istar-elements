@@ -22,6 +22,10 @@ export class IStarResource extends ModelShapeRect {
     return group;
   }
 
+  get descriptiveName() {
+    return `Resource`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
       title: {

@@ -26,6 +26,10 @@ export class IStarContribution extends ModelShapePath {
     return group;
   }
 
+  get descriptiveName() {
+    return `Contribution`;
+  }
+
   get properties() {
     return Object.assign(super.properties, {
       contribution: {
