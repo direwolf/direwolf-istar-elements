@@ -50,7 +50,12 @@ export class IStarQuality extends ModelElement {
   }
 
   get resizable() {
-    return false;
+    return true;
+  }
+
+  _resize() {
+    this.path.size(this.width, this.height);
+    this.titleNode.attr({y:((this.height / 2) + 3)}).cx(this.width / 2);
   }
 
   get minWidth() {
@@ -114,6 +119,7 @@ export class IStarQuality extends ModelElement {
     }
 
     this._updateTitle();
+    this._resize();
 
     this.element.transform({translateX: this.x, translateY: this.y});
   }
@@ -128,6 +134,12 @@ export class IStarQuality extends ModelElement {
           break;
         case 'y':
           this.element.transform({translateX: this.x, translateY: event.target.get(key)});
+          break;
+        case 'width':
+          this._resize();
+          break;
+        case 'height':
+          this._resize();
           break;
         case 'title':
           this._updateTitle();
