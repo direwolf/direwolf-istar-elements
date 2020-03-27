@@ -19,40 +19,33 @@ export class IStarRole extends IStarActor {
   }
 
   get resizable() {
-    return false;
-  }
-
-  /*
-  get properties() {
-    return Object.assign(super.properties, {
-      title: {
-        type: String
-      }
-    });
+    return true;
   }
 
   _resize() {
-    let diameter = this.diameter;
-    this.titleNode.x(diameter / 2);
-    this.titleNode.attr({y: ((diameter / 2) + 3)});
-  }
+    super._resize();
 
-  _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.diameter / 2) + 3), 'text-anchor': 'middle'}).x(this.diameter / 2);
-  }
+    // calculate the chord on top
+    // thx to https://www.arndt-bruenner.de/mathe/scripts/kreissehnen.htm
+    const alpha = 122.08995125628;
+    const radius = this.diameter / 2;
 
-  showPortOnHover() {
-    return false;
-  }
+    // length of the chord
+    const s = 2 * radius * Math.sin((alpha * Math.PI / 180) / 2);
+    const a = (2 * radius - Math.sqrt(4 * Math.pow(radius, 2) - Math.pow(s, 2))) / 2;
+    const crossx1 = (this.diameter - s) / 2;
+    const crossx2 = this.diameter - crossx1;
+    const crossy = this.diameter - a;
 
-  acceptsChild(modelElementType) {
-    return false;
-  }
+    const curvex1 = (3/8) * this.diameter;
+    const curvex2 = (5/8) * this.diameter;
+    const curvey = radius + (7/8) * radius;
 
-  modelElementDragOver(modelElementType) {
-    return this.acceptsChild(modelElementType);
+
+    const path = `M${Math.round(crossx1)},${Math.round(crossy)}C${Math.round(curvex1)},${Math.round(curvey)} ${Math.round(curvex2)},${Math.round(curvey)} ${Math.round(crossx2)},${Math.round(crossy)}`;
+    this.bow.plot(path);
+    console.log(path);
   }
-  */
 
 
   /**
