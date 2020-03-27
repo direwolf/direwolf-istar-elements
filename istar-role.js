@@ -41,10 +41,8 @@ export class IStarRole extends IStarActor {
     const curvex2 = (5/8) * this.diameter;
     const curvey = radius + (7/8) * radius;
 
-
     const path = `M${Math.round(crossx1)},${Math.round(crossy)}C${Math.round(curvex1)},${Math.round(curvey)} ${Math.round(curvex2)},${Math.round(curvey)} ${Math.round(crossx2)},${Math.round(crossy)}`;
     this.bow.plot(path);
-    console.log(path);
   }
 
 
