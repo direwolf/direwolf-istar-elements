@@ -31,11 +31,15 @@ export class IStarActor extends ModelShapeCircle {
   }
 
   get resizable() {
-    return false;
+    return true;
   }
 
   _resize() {
     let diameter = this.diameter;
+    this.circle.radius(diameter / 2);
+    this.circle.x(0);
+    this.circle.y(0);
+
     this.titleNode.cx(diameter / 2);
     this.titleNode.attr({y: ((diameter / 2) + 3)});
   }
