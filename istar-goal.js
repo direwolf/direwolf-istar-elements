@@ -18,7 +18,7 @@ export class IStarGoal extends ModelShapeRect {
 
     this.rect.fill('#D1FEC7').radius(25);
 
-    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._height / 2) + 3), 'text-anchor': 'middle'}).cx(this._width / 2);
+    this.titleNode = group.text(this._title).font({'family': 'monospace'}).attr({'text-anchor': 'middle'}).cx(this._width / 2).cy(this._height / 2);
 
     return group;
   }
@@ -30,7 +30,8 @@ export class IStarGoal extends ModelShapeRect {
   get properties() {
     return Object.assign(super.properties, {
       title: {
-        type: String
+        type: String,
+        multiline: true,
       }
     });
   }
@@ -38,12 +39,11 @@ export class IStarGoal extends ModelShapeRect {
   _resize() {
     let width = this.width;
     let height = this.height;
-    this.titleNode.cx(width / 2);
-    this.titleNode.attr({y: ((height / 2) + 3)});
+    this._updateTitle();
   }
 
   _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.height / 2) + 3), 'text-anchor': 'middle'}).cx(this.width / 2);
+    this.titleNode.text(this.title).cx(this.width / 2).cy(this.height / 2);
   }
 
   showPortOnHover() {

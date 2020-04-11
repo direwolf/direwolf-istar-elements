@@ -13,7 +13,7 @@ export class IStarActor extends ModelShapeCircle {
 
     this.circle.fill('#D1FEC7');
 
-    this.titleNode = group.plain(this._title).font({'family': 'monospace'}).attr({y:((this._diameter / 2) + 3), 'text-anchor': 'middle'}).cx(this._diameter / 2);
+    this.titleNode = group.text(this._title).font({'family': 'monospace'}).attr({'text-anchor': 'middle'}).cx(this._diameter / 2).cy(this._diameter / 2);
 
     return group;
   }
@@ -21,7 +21,8 @@ export class IStarActor extends ModelShapeCircle {
   get properties() {
     return Object.assign(super.properties, {
       title: {
-        type: String
+        type: String,
+        multiline: true,
       }
     });
   }
@@ -39,13 +40,11 @@ export class IStarActor extends ModelShapeCircle {
     this.circle.radius(diameter / 2);
     this.circle.x(0);
     this.circle.y(0);
-
-    this.titleNode.cx(diameter / 2);
-    this.titleNode.attr({y: ((diameter / 2) + 3)});
+    this._updateTitle();
   }
 
   _updateTitle() {
-    this.titleNode.plain(this.title).font({'family': 'monospace'}).attr({y:((this.diameter / 2) + 3), 'text-anchor': 'middle'}).cx(this.diameter / 2);
+    this.titleNode.text(this.title).cx(this.diameter / 2).cy(this.diameter / 2);
   }
 
   showPortOnHover() {
