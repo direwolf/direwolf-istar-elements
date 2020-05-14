@@ -1,6 +1,6 @@
 {
   "name": "direwolf-istar-elements",
-  "version": "0.0.12",
+  "version": "0.0.11",
   "description": "iStar 2.0 elements for the Direwolf Modeler",
   "author": "direwolf-istar-elements",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
     "direwolf-elements": "^0.0.5",
-    "direwolf-modeler": "^0.0.16",
+    "direwolf-modeler": "^0.0.19",
     "kld-intersections": "^0.7.0",
     "lit-element": "^2.3.1",
     "lit-html": "^1.2.1"
