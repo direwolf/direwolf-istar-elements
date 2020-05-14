@@ -36,9 +36,10 @@ export class IStarTask extends ModelShapeHexagon {
 
     const width = this.width;
     const height = this.height;
+    const title = this.title;
 
     // a resize only makes sense if both width and height are already defined...
-    if (width && height) {
+    if (width && height && title) {
       this._updateTitle();
     }
   }
@@ -71,7 +72,6 @@ export class IStarTask extends ModelShapeHexagon {
       this.title = this._title;
     }
 
-    this._updateTitle();
     this._resize();
   }
 

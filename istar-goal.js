@@ -37,9 +37,14 @@ export class IStarGoal extends ModelShapeRect {
   }
 
   _resize() {
-    let width = this.width;
-    let height = this.height;
-    this._updateTitle();
+    const width = this.width;
+    const height = this.height;
+    const title = this.title;
+
+    // a resize only makes sense if both width and height are already defined...
+    if (width && height && title) {
+      this._updateTitle();
+    }
   }
 
   _updateTitle() {
@@ -59,7 +64,8 @@ export class IStarGoal extends ModelShapeRect {
   }
 
   getOuterShape(offset) {
-    let shape = ShapeInfo.rectangle({x: (offset.x + this.x), y: (offset.y + this.y), width: this.width, height: this.height, rx: 25, ry: 25});
+    //let shape = ShapeInfo.rectangle({x: (offset.x + this.x), y: (offset.y + this.y), w: this.width, h: this.height, rx: 25, ry: 25});
+    let shape = ShapeInfo.rectangle((offset.x + this.x), (offset.y + this.y), this.width, this.height, 25, 25);
     return shape;
   }
 
