@@ -34,6 +34,20 @@ export class IStarDependency extends ModelShapePath {
       if (this.text) {
         this.text.cx(mid[0]);
         this.text.cy(mid[1]);
+
+        // calculate angle
+        // kudos https://bl.ocks.org/shancarter/1034db3e675f2d3814e6006cf31dbfdc
+        const source = {x: 1, y: 0};
+        const compare = {x: (this._pathArray[1][0] - this._pathArray[0][0]), y: (this._pathArray[0][1]) - this._pathArray[1][1]};
+        const a2 = Math.atan2(source.y, source.x);
+        const a1 = Math.atan2(compare.y, compare.x);
+        const sign = a1 > a2 ? 1 : -1;
+        let angle = a1 - a2;
+        const K = -sign * Math.PI * 2;
+        angle = (Math.abs(K + angle) < Math.abs(angle))? K + angle : angle;
+        let degree = Math.abs(Math.round(360 * angle / (Math.PI * 2)));
+        degree = (angle < 0) ? (360 - degree) : degree;
+        this.text.transform({rotate: (360 - degree)});
       }
     }
   }
