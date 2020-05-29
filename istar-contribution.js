@@ -68,6 +68,9 @@ export class IStarContribution extends ModelShapePath {
 
     if (this._createdLocally && !this.contribution) {
       this.contribution = this._contribution;
+    } else if (this.contribution) {
+      this.text.text(this.contribution);
+      this.redrawPath();
     }
   }
 
@@ -77,6 +80,7 @@ export class IStarContribution extends ModelShapePath {
     event.keysChanged.forEach((key) => {
       switch (key) {
         case 'contribution':
+          this.text.text(this.contribution);
           this.redrawPath();
           break;
       }
