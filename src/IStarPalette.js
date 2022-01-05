@@ -1,4 +1,4 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, css, LitElement } from 'lit';
 import { GestureEventListeners } from 'direwolf-modeler/src/utils/gesture-event-listeners.js';
 import * as Gestures from 'direwolf-modeler/src/utils/gestures.js';
 

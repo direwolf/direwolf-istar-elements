@@ -1,6 +1,6 @@
 {
   "name": "direwolf-istar-elements",
-  "version": "0.0.14",
+  "version": "0.1.0",
   "description": "iStar 2.0 elements for the Direwolf Modeler",
   "author": "direwolf-istar-elements",
   "license": "MIT",
@@ -11,18 +11,16 @@
     "url": "https://github.com/direwolf/direwolf-istar-elements"
   },
   "scripts": {
-    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
-    "start:compatibility": "es-dev-server --app-index demo/index.html --compatibility all --node-resolve --open --watch"
+    "start": "web-dev-server"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.16",
-    "direwolf-elements": "^0.0.5",
-    "direwolf-modeler": "^0.0.19",
+    "@svgdotjs/svg.js": "^3.1.1",
+    "direwolf-elements": "direwolf/direwolf-elements",
+    "direwolf-modeler": "direwolf/direwolf-modeler",
     "kld-intersections": "^0.7.0",
-    "lit-element": "^2.3.1",
-    "lit-html": "^1.2.1"
+    "lit": "^2.0.2"
   },
   "devDependencies": {
-    "es-dev-server": "^1.49.0"
+    "@web/dev-server": "^0.1.28"
   }
 }
